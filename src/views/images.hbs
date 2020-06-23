@@ -10,6 +10,7 @@
 
     .swiper-container {
       width: 100%;
+      height: 70vh;
       padding-top: 50px;
       padding-bottom: 50px;
     }
@@ -17,8 +18,8 @@
     .swiper-slide {
       background-position: center;
       background-size: cover;
-      width: 300px;
-      height: 300px;
+      width: 350px;
+      height: 350px;
 
     }
 </style>
@@ -28,15 +29,11 @@
 <!-- Swiper -->
   <div class="swiper-container">
     <div class="swiper-wrapper">
-      {{#each photos as | photo |}}
+      {{#each newPhotos as | photo |}}
             {{#with photo}}
-                <h1>{{title}}</h1>
-                {{!-- <img src="{{imageURL}}" alt="{{title}}" class="swiper-slide">    --}}
+                <img src="{{imageURL}}" alt="{{title}}" class="swiper-slide">   
             {{/with}}
       {{/each}}
     </div>
     <!-- Add Pagination -->
     <div class="swiper-pagination"></div>
-
-
-{{log  "CONSOLE LOGUEANDO" photos}}

@@ -23,18 +23,20 @@
     <div class="col-md-8">
         <table class="table">
             <thead>
-                <tr>Title</tr>
-                <tr>Description</tr>
-                <tr>Operations</tr>
+                <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Operations</th>
+                </tr>
             </thead>
             <tbody>
-                {{#each photos}}
+                {{#each newPhotos}}
                     <tr>
                          <td>{{title}}</td>
                         <td>{{description}}</td>
                         <td>
                             <a href="{{imageURL}}" class="btn btn-primary" target="_blank">View</a>
-                            <a href="" class="btn btn-danger">Delete</a>
+                            <a href="/image/delete/{{_id}}" class="btn btn-danger">Delete</a>
                         </td> 
                     </tr>
                 {{/each}}
